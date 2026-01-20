@@ -11,7 +11,7 @@ import scipy.stats
 
 #Par convention, on place les fonctions locales au début du code après les bibliothèques.
 def ouvrirUnFichier(nom):
-    with open(r"C:\test\Analyse d edonnées\séance 5\src\data\Echantillonnage-100-Echantillons.csv") as fichier:
+    with open(r"./data/Echantillonnage-100-Echantillons.csv") as fichier:
         contenu = pd.read_csv(fichier)
     return contenu
 
@@ -52,7 +52,7 @@ def ouvrirUnFichier(adresse):
 
 # Étape 2 : Chargement et calculs 
 # Utilisation du chemin absolu pour corriger l'erreur système
-chemin_absolu = r"C:\test\Analyse d edonnées\séance 5\src\data\Echantillonnage-100-Echantillons.csv"
+chemin_absolu = r"./data/Echantillonnage-100-Echantillons.csv"
 donnees = ouvrirUnFichier(chemin_absolu)
 
 if donnees is not None:
@@ -144,8 +144,8 @@ import pandas as pd
 from scipy.stats import shapiro
 
 # --- Chemins des fichiers (Vérifiez qu'ils pointent bien vers des fichiers différents) ---
-chemin_test1 = r"C:\test\Analyse d edonnées\séance 5\src\data\Loi-normale-Test-1.csv"
-chemin_test2 = r"C:\test\Analyse d edonnées\séance 5\src\data\Loi-normale-Test-2.csv"
+chemin_test1 = r"./data/Loi-normale-Test-1.csv"
+chemin_test2 = r"./data/Loi-normale-Test-2.csv"
 
 def tester_normalite_corrige(chemin, etiquette):
     try:

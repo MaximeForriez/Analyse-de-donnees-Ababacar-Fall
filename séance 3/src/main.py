@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 # Question 4
-chemin = r'C:\test\Analyse d edonnées\séance 3\src\data\resultats-elections-presidentielles-2022-1er-tour.csv'
+chemin = r'./data/resultats-elections-presidentielles-2022-1er-tour.csv'
 with open(chemin, mode='r', encoding='utf-8') as fichier:
     # La variable 'fichier' est passée directement à read_csv
     df = pd.read_csv(fichier, sep=',', quotechar='"')
@@ -138,7 +138,7 @@ import re
 import numpy as np
 
 # --- 1. Configuration et Chargement ---
-chemin = r'C:\test\Analyse d edonnées\séance 3\src\data\resultats-elections-presidentielles-2022-1er-tour.csv'
+chemin = r'./data/resultats-elections-presidentielles-2022-1er-tour.csv'
 dossier_sortie = "img"
 
 print("Chargement des données...")
@@ -226,7 +226,7 @@ print(f"Les images sont enregistrées dans : {os.path.abspath(dossier_sortie)}")
 
 
 # Question 9
-chemin_island = r'C:\test\Analyse d edonnées\séance 3\src\data\island-index.csv'
+chemin_island = r'./data/island-index.csv'
 
 
 
@@ -235,7 +235,7 @@ import pandas as pd
 import os
 
 # Chemin vers le fichier de la séance 3
-chemin_island = r'C:\test\Analyse d edonnées\séance 3\src\data\island-index.csv'
+chemin_island = r'./data/island-index.csv'
 
 # Étape 4 : Instruction 'with' et variable 'fichier'
 try:
@@ -292,11 +292,11 @@ stats = {
 df_stats = pd.DataFrame(list(stats.items()), columns=['Paramètre', 'Valeur'])
 
 # Exportation C.S.V.
-df_stats.to_csv(r'C:\test\Analyse d edonnées\séance 3\src\data\stats_islands.csv', sep=';', index=False, encoding='utf-8-sig')
+df_stats.to_csv(r'./data/stats_islands.csv', sep=';', index=False, encoding='utf-8-sig')
 
 # Exportation Excel
 try:
-    df_stats.to_excel(r'C:\test\Analyse d edonnées\séance 3\src\data\stats_islands.xlsx', index=False)
+    df_stats.to_excel(r'./data/stats_islands.xlsx', index=False)
     print("✅ Exportation C.S.V. et Excel réussie.")
 except ImportError:
     print("⚠️ Pour Excel, installez openpyxl : pip install openpyxl")

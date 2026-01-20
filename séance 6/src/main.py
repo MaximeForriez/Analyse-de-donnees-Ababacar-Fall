@@ -15,7 +15,7 @@ def ouvrirUnFichier(nom):
 
 # --- 1. Définition du chemin absolu exact ---
 # Nous utilisons le préfixe 'r' pour que Windows interprète bien les barres \
-adresse_data = r"C:\test\Analyse d edonnées\séance 6\src\data\island-index.csv"
+adresse_data = r"./data/island-index.csv"
 
 # --- 2. Fonction ouvrirUnFichier avec gestion d'encodage ---
 def ouvrirUnFichier(nom):
@@ -102,7 +102,7 @@ def ouvrirUnFichier(nom):
         return None
 
 # --- Question 8 & 9 : Chargement effectif du fichier ---
-chemin_monde = r"C:\test\Analyse d edonnées\séance 6\src\data\Le-Monde-HS-Etats-du-monde-2007-2025.csv"
+chemin_monde = r"./data/Le-Monde-HS-Etats-du-monde-2007-2025.csv"
 
 # CORRECTION : On appelle la fonction avec son paramètre
 monde = ouvrirUnFichier(chemin_monde)
@@ -214,8 +214,8 @@ print(f"2025 - Kendall  : {tau_2025:.4f} (p={p_k2025:.2e})")
 
 
 # Chemins Absolus 
-path_iles = r"C:\test\Analyse d edonnées\séance 6\src\data\island-index.csv"
-path_monde = r"C:\test\Analyse d edonnées\séance 6\src\data\Le-Monde-HS-Etats-du-monde-2007-2025.csv"
+path_iles = r"./data/island-index.csv"
+path_monde = r"./data/Le-Monde-HS-Etats-du-monde-2007-2025.csv"
 
 # Chargement robuste
 iles = ouvrirUnFichier(path_iles)
